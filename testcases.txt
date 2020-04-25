@@ -1,0 +1,40 @@
+Nikita Kolotov	NETID: nkk31	Section: 2
+Michala Rose	NETID: mmr245	Section: 3
+
+ASST3: WTF Test cases
+Test Case 1: No configuration file located
+Input: ./WTF checkout proj1
+Output: Could not open configure file. Please create one using the configure command. Simply type ./WTF configure <host name> <IP>
+Failed to configure
+
+Output was as expected
+
+Test Case 2: Configuration
+Input: ./WTF configure state.cs.rutgers.edu 45535
+Output: .Configure file with those two each in their own lines
+Output was as expected
+
+Test Case 3: Checkout
+Input: ./WTF checkout projTest
+Output: Client recieves a folder with the project files intact
+Output was as expected
+
+Test Case 4: Push
+Input: ./WTF push projTest
+Output: Server recieves the project files as a tar and updates the old project
+Output was as expected
+
+Test Case 5: CurrentVersion
+Input: ./WTF currentversion projTest
+Output: Client ouputs to STDOUT the manifest from the Server
+Output was as expected
+
+Test Case 6: History
+Input: ./WTF history projTest
+Output: Client will recieve to STDOUT a list of all poject changes
+Output was as expected
+
+Test Case 7: Wrong number arguments
+Input: ./WTF 
+Output: ERROR: Wrong number of arguments
+Output was as expected
